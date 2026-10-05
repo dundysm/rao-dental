@@ -36,27 +36,36 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 .sec{padding:128px 0;scroll-margin-top:72px}
 .sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 64px;margin-bottom:64px}
-.hero{position:relative;min-height:860px;display:flex;align-items:flex-end;overflow:hidden;background:radial-gradient(90% 120% at 70% 40%,#2B5049 0%,#1F3A36 55%,#172C29 100%);color:var(--ivory)}
+.hero{position:relative;background:var(--ivory);color:var(--ink);padding:156px 0 72px}
+.hero-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center}
+.hero-copy{min-width:0}
+.hero-media{position:relative;min-width:0;aspect-ratio:5 / 4;border-radius:24px;overflow:hidden;background:var(--sand) url('assets/hero-dental-poster.jpg') 60% center / cover}
 .hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center}
-.hero{background-image:url('assets/hero-dental-poster.jpg');background-size:cover;background-position:60% center}
-.hero-video-toggle{position:absolute;right:24px;bottom:24px;z-index:2;border:1px solid rgba(247,242,233,.5);border-radius:999px;background:rgba(23,44,41,.75);color:var(--ivory);padding:10px 16px;font-size:13px;cursor:pointer}
+.hero-video-toggle{position:absolute;right:12px;bottom:12px;z-index:2;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:rgba(23,44,41,.6);color:#fff;cursor:pointer}
+.hero-video-toggle:hover,.hero-video-toggle:focus-visible{background:var(--night)}
+.hero-video-toggle svg{width:16px;height:16px;fill:currentColor}
+.hero-video-toggle .video-pause{display:none}
+.hero-video-toggle[data-playing="true"] .video-play{display:none}
+.hero-video-toggle[data-playing="true"] .video-pause{display:block}
 .hero-video-toggle[hidden]{display:none}
 @media (prefers-reduced-motion:reduce){.hero-vid{display:none}.hero-vid.is-playing{display:block}}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,44,41,.72) 0%,rgba(23,44,41,.35) 55%,rgba(23,44,41,.15) 100%),linear-gradient(180deg,rgba(23,44,41,.45) 0%,rgba(23,44,41,0) 35%,rgba(23,44,41,.6) 100%)}
 .hero-stat{display:flex;flex-direction:column;gap:2px;margin-bottom:28px}
 .hero-num{font-family:var(--serif);font-size:64px;line-height:1;color:var(--gold)}
 .hero-numl{font-size:14px;letter-spacing:.04em;color:rgba(247,242,233,.85)}
-.hero-h1{margin:0;display:flex;flex-direction:column;gap:12px;max-width:760px}
-.hero-name{font-family:var(--serif);font-weight:400;font-size:clamp(56px,7.4vw,108px);line-height:.98;letter-spacing:-.015em;color:var(--ivory);white-space:nowrap}
-.hero-tag{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(28px,3.6vw,52px);line-height:1.12;color:var(--gold);max-width:24ch}
-.hero-logos{display:flex;flex-wrap:wrap;gap:18px 48px;margin-top:88px;padding-top:28px;border-top:1px solid rgba(247,242,233,.22)}
+.hero-h1{margin:0 0 24px}
+.hero-name{font-family:var(--serif);font-weight:400;font-size:clamp(56px,6.5vw,92px);line-height:1.02;letter-spacing:-.015em;color:var(--night)}
+.hero-tag{font-family:var(--sans);font-weight:500;font-size:clamp(21px,2vw,26px);line-height:1.4;color:var(--ink)}
+.hero-location{margin-top:12px;font-size:18px;line-height:1.6;color:var(--ink2);max-width:32ch}
+.hero-cta{margin-top:28px}
+.hero-logos{display:flex;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
 .hero-logo{display:flex;flex-direction:column;gap:2px;color:rgba(247,242,233,.9)}
 .hero-logo strong{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1;letter-spacing:.04em}
 .hero-logo small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(247,242,233,.6)}
 @keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 .hero-stat,.hero-h1,.hero-cta,.hero-logos{animation:heroIn 1s cubic-bezier(.2,.7,.2,1) both}
 .hero-h1{animation-delay:.12s}.hero-cta{animation-delay:.24s}.hero-logos{animation-delay:.4s}
-@media (prefers-reduced-motion:reduce){.hero-stat,.hero-h1,.hero-cta,.hero-logos{animation:none}}}
+@media (prefers-reduced-motion:reduce){.hero-stat,.hero-h1,.hero-cta,.hero-logos{animation:none}}
 .hero .btn-hero{background:transparent;color:var(--ivory);border-color:rgba(247,242,233,.5)}
 .hero .btn-hero:hover{background:var(--ivory);color:#1F3A36;border-color:var(--ivory)}
 .hero .h1 em{color:var(--gold)}
@@ -100,10 +109,12 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media (max-width:860px){
   .sec{padding:80px 0}
   .sec-head{margin-bottom:40px;gap:20px}
-  .hero{min-height:0}
+  .hero{padding:116px 0 48px}
+  .hero-layout{grid-template-columns:1fr;gap:36px}
+  .hero-media{aspect-ratio:4 / 3}
   .hero-in{padding-top:120px;padding-bottom:40px}
   .hero-num{font-size:48px}
-  .hero-logos{margin-top:48px;gap:16px 28px}
+  .hero-logos{margin-top:32px}
   .hero-logo strong{font-size:24px}
   .hero-scrim{display:none}
   .hero-fig{position:relative;order:2;right:auto;left:auto;top:auto;bottom:auto;width:78%;height:auto;margin:36px auto 48px}
@@ -275,15 +286,15 @@ a{color:inherit;text-decoration:none}
 @media (max-width:560px){.grid-t.car{grid-auto-columns:86%}.car-nav{margin-top:0}}
 </style>
 <style>
-.hero-logos{align-items:center;justify-content:center;gap:24px 64px}
-.hero-assoc{width:auto;display:block}
-@media (max-width:860px){.hero-logos{gap:20px 36px}.hero-assoc{zoom:.8}}
+.hero-logos{align-items:center;justify-content:flex-start;gap:20px 28px}
+.hero-assoc{width:auto;max-width:100%;display:block;filter:brightness(0);opacity:.65}
+@media (max-width:860px){.hero-logos{gap:20px 24px}}
 </style>
 </head>
 <body>
 <div id="dc-root"><div class="sc-host" data-sc-name="Main"><div id="top">
   <div class="sc-host" data-sc-name="Nav"><div>
-  <header class="nv ondark">
+  <header class="nv">
     <div class="nv-in">
       <a class="nv-mark" href="index.html"><svg class="nv-tooth" viewBox="16 0 194 218" aria-hidden="true" style="height: 1.35em; width: auto; margin-right: 0.3em; vertical-align: -0.28em;"><mask id="nvm" maskUnits="userSpaceOnUse" x="10" y="-4" width="204" height="226"><rect x="10" y="-4" width="204" height="226" fill="#fff"/><path d="M66 90 Q99.5 117 133 90" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round"/><path d="M177 7 C178.5 26 182 31 203 33 C182 35 178.5 40 177 59 C175.5 40 172 35 151 33 C172 31 175.5 26 177 7Z" fill="#000" stroke="#000" stroke-width="7" stroke-linejoin="round"/></mask><path d="M100 30 C70 10 30 15 22 55 C15 90 35 120 45 160 C52 190 58 212 72 212 C88 212 85 162 100 152 C115 162 112 212 128 212 C142 212 148 190 155 160 C165 120 185 90 178 55 C170 15 130 10 100 30 Z" fill="currentColor" mask="url(#nvm)"/><path d="M177 7 C178.5 26 182 31 203 33 C182 35 178.5 40 177 59 C175.5 40 172 35 151 33 C172 31 175.5 26 177 7Z" fill="#C4A977"/></svg>Rao Dental</a>
       <nav class="nv-links" aria-label="Primary">
@@ -311,21 +322,26 @@ a{color:inherit;text-decoration:none}
   </div></div>
 
   
-  <section class="hero dark">
-    <video class="hero-vid" muted loop playsinline preload="none" poster="assets/hero-dental-poster.jpg" aria-hidden="true">
-      <source src="assets/hero-dental.mp4" type="video/mp4">
-    </video>
-    <div class="hero-shade"></div>
-    <button class="hero-video-toggle" type="button" hidden>Play background video</button>
-    <div class="hero-in">
-      <div class="wrap">
-        <h1 class="hero-h1"><span class="hero-name">Rao Dental</span><span class="hero-tag">Family &amp; Cosmetic Dentistry in Pikesville and Eldersburg, Maryland</span></h1>
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap hero-layout">
+      <div class="hero-copy">
+        <h1 class="hero-h1 hero-name" id="hero-heading">Rao Dental</h1>
+        <p class="hero-tag">Family &amp; Cosmetic Dentistry</p>
+        <p class="hero-location">Serving Pikesville and Eldersburg, Maryland</p>
+        <div class="hero-cta"><a class="btn btn-gold" href="#book">Book a consultation</a></div>
         <div class="hero-logos" aria-label="Professional memberships">
-          <img class="hero-assoc" src="assets/assoc-ada-white.png" alt="American Dental Association" width="514" height="150" style="height: 38px;">
-          <img class="hero-assoc" src="assets/assoc-msda-white.png" alt="Maryland State Dental Association" width="451" height="210" style="height: 64px;">
-          <img class="hero-assoc" src="assets/assoc-agd-white.png" alt="Academy of General Dentistry" width="657" height="180" style="height: 54px;">
-        
+          <img class="hero-assoc" src="assets/assoc-ada-white.png" alt="American Dental Association" width="514" height="150" style="height: 25px;">
+          <img class="hero-assoc" src="assets/assoc-msda-white.png" alt="Maryland State Dental Association" width="451" height="210" style="height: 38px;">
+          <img class="hero-assoc" src="assets/assoc-agd-white.png" alt="Academy of General Dentistry" width="657" height="180" style="height: 34px;">
         </div>
+      </div>
+      <div class="hero-media">
+        <video class="hero-vid" muted loop playsinline preload="none" poster="assets/hero-dental-poster.jpg" aria-hidden="true">
+          <source src="assets/hero-dental.mp4" type="video/mp4">
+        </video>
+        <button class="hero-video-toggle" type="button" hidden aria-label="Play video" title="Play video" data-playing="false">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path class="video-play" d="M4 2l10 6-10 6z"/><path class="video-pause" d="M3 2h4v12H3zM9 2h4v12H9z"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -1248,7 +1264,12 @@ a{color:inherit;text-decoration:none}
     var motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
     heroVideo.muted=true;
     videoToggle.hidden=false;
-    function updateVideoToggle(){videoToggle.textContent=heroVideo.paused?'Play background video':'Pause background video';}
+    function updateVideoToggle(){
+      var label=heroVideo.paused?'Play video':'Pause video';
+      videoToggle.setAttribute('aria-label',label);
+      videoToggle.title=label;
+      videoToggle.dataset.playing=String(!heroVideo.paused);
+    }
     function playHeroVideo(){
       heroVideo.classList.add('is-playing');
       var playback=heroVideo.play();
