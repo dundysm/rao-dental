@@ -33,7 +33,7 @@
     settings = document.createElement('button');
     settings.type = 'button';
     settings.className = 'cookie-settings lnk';
-    settings.textContent = 'Cookie settings';
+    settings.textContent = 'Cookie Settings';
     footer.appendChild(settings);
     settings.addEventListener('click', function () {
       reopened = true;
