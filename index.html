@@ -40,8 +40,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hero-media{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:1920px;background:var(--night) url('assets/hero-dental-poster.jpg') 60% center / cover}
 @media (min-width:1921px){.hero-media{mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}}
 .hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center}
-.hero-video-toggle{position:absolute;right:max(12px,calc((100% - 1920px)/2 + 12px));bottom:12px;z-index:2;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:rgba(23,44,41,.6);color:#fff;cursor:pointer}
-.hero-video-toggle:hover,.hero-video-toggle:focus-visible{background:var(--night)}
+.hero-video-toggle{position:absolute;right:max(12px,calc((100% - 1920px)/2 + 12px));bottom:12px;z-index:2;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:var(--ivory);opacity:.32;cursor:pointer;transition:opacity .2s ease}
+.hero-video-toggle:hover{background:transparent;opacity:.85}
+.hero-video-toggle:focus-visible{background:transparent;opacity:1;outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.hero-video-toggle{transition:none}}
 .hero-video-toggle svg{width:16px;height:16px;fill:currentColor}
 .hero-video-toggle .video-pause{display:none}
 .hero-video-toggle[data-playing="true"] .video-play{display:none}
