@@ -198,14 +198,14 @@ a{color:inherit;text-decoration:none}
         
       </nav>
       <div class="nv-right">
-        <a class="btn btn-gold nv-book" href="contact.html">Book a consultation</a>
+        <a class="btn btn-gold nv-book" href="contact.html">Book A Consultation</a>
         <button type="button" class="nv-burger" aria-label="Open menu" aria-expanded="false">
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 9h18"></path><path d="M4 17h18"></path></svg>
         </button>
       </div>
     </div>
   </header>
-  <div class="nv-cta"><a class="btn btn-gold" href="contact.html">Book a consultation</a></div>
+  <div class="nv-cta"><a class="btn btn-gold" href="contact.html">Book A Consultation</a></div>
   </div></div>
   <div class="sc-host" data-sc-name="PageHeader"><header class="ph-h">
   <div class="wrap">
@@ -220,7 +220,7 @@ a{color:inherit;text-decoration:none}
         <h1 class="ph-t"><span class="sc-interp">Dental veneers</span></h1>
         <p style="font-size: 19px; line-height: 1.65; color: rgb(92, 86, 77); max-width: 50ch;"><span class="sc-interp">Very thin porcelain or resin shells, customised for colour and shape and bonded to the front of your teeth for a natural-looking smile.</span></p>
         
-          <a class="btn btn-gold" href="contact.html">Book a consultation</a>
+          <a class="btn btn-gold" href="contact.html">Book A Consultation</a>
         
       </div>
       <svg class="ph-art" role="img" aria-label="Illustration of a thin veneer shell being placed on the front of a tooth" viewBox="0 0 480 520" style="width: 100%; max-width: 420px; height: auto; justify-self: center; display: block;" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -423,7 +423,7 @@ a{color:inherit;text-decoration:none}
         <p style="font-size: 18px; line-height: 1.65; color: rgb(92, 86, 77); max-width: 46ch;"><span class="sc-interp">Book a consultation and we will talk through your goals, take a gentle look, and map out your options with no pressure.</span></p>
       </div>
       <div style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 18px;">
-        <a class="btn btn-gold" href="contact.html">Book a consultation</a>
+        <a class="btn btn-gold" href="contact.html">Book A Consultation</a>
         <a class="lnk" href="tel:4438986788" style="font-size: 16px;">Pikesville (443) 898-6788</a>
         <a class="lnk" href="tel:4107817188" style="font-size: 16px;">Eldersburg (410) 781-7188</a>
       </div>
@@ -512,7 +512,7 @@ a{color:inherit;text-decoration:none}
     var links=[].slice.call(document.querySelectorAll('.nv-links a')).map(function(a){return '<a class="menu-a" href="'+a.getAttribute('href')+'">'+a.textContent.trim()+'</a>';}).join('');
     var book=document.querySelector('.nv-book'); var bh=book?book.getAttribute('href'):'contact.html';
     var menu=document.createElement('div'); menu.className='menu'; menu.setAttribute('role','dialog'); menu.setAttribute('aria-label','Menu'); menu.style.display='none';
-    menu.innerHTML='<div class="menu-top"><span class="nv-mark">Rao Dental</span><button type="button" class="nv-burger" style="display:inline-flex" aria-label="Close menu"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l14 14"/><path d="M20 6L6 20"/></svg></button></div><nav style="margin-top:24px" aria-label="Mobile">'+links+'</nav><div style="margin-top:auto; padding-top:40px; display:flex; flex-direction:column; gap:20px"><a href="tel:4438986788" style="font-size:17px">Pikesville (443) 898-6788</a><a href="tel:4107817188" style="font-size:17px">Eldersburg (410) 781-7188</a><a class="btn btn-gold" href="'+bh+'">Book a consultation</a></div>';
+    menu.innerHTML='<div class="menu-top"><span class="nv-mark">Rao Dental</span><button type="button" class="nv-burger" style="display:inline-flex" aria-label="Close menu"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l14 14"/><path d="M20 6L6 20"/></svg></button></div><nav style="margin-top:24px" aria-label="Mobile">'+links+'</nav><div style="margin-top:auto; padding-top:40px; display:flex; flex-direction:column; gap:20px"><a href="tel:4438986788" style="font-size:17px">Pikesville (443) 898-6788</a><a href="tel:4107817188" style="font-size:17px">Eldersburg (410) 781-7188</a><a class="btn btn-gold" href="'+bh+'">Book A Consultation</a></div>';
     document.body.appendChild(menu);
     burger.addEventListener('click',function(){menu.style.display='flex'; burger.setAttribute('aria-expanded','true');});
     menu.addEventListener('click',function(e){ if(e.target.closest('button')||e.target.closest('a')){ menu.style.display='none'; burger.setAttribute('aria-expanded','false'); } });
