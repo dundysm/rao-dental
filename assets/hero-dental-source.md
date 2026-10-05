@@ -6,7 +6,7 @@
 - License: https://www.pexels.com/license/ (accessed October 5, 2026).
 - This is stock footage, not footage of Rao Dental staff or premises.
 
-The local MP4 is an 18-second, silent H.264 loop at 1600 pixels wide and
+The local MP4 is an 18-second, silent H.264 loop at 1920 pixels wide and
 24 fps. Its final second dissolves into its first second to soften the loop.
 The JPEG poster is a still from the same clip. Both are served locally.
 
