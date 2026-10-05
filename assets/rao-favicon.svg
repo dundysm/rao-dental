@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" rx="50" fill="#1F3A36"/><g transform="translate(32 19) scale(.965)"><path d="M100 30 C70 10 30 15 22 55 C15 90 35 120 45 160 C52 190 58 212 72 212 C88 212 85 162 100 152 C115 162 112 212 128 212 C142 212 148 190 155 160 C165 120 185 90 178 55 C170 15 130 10 100 30 Z" fill="#F5F0E8"/><path d="M66 90 Q99.5 117 133 90" fill="none" stroke="#1F3A36" stroke-width="12" stroke-linecap="round"/><path d="M177 7 C178.5 26 182 31 203 33 C182 35 178.5 40 177 59 C175.5 40 172 35 151 33 C172 31 175.5 26 177 7Z" fill="#C4A977" stroke="#1F3A36" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="50" fill="#163B34"/>
+  <g transform="translate(12 4) scale(1.15)">
+    <path d="M100 30 C70 10 30 15 22 55 C15 90 35 120 45 160 C52 190 58 212 72 212 C88 212 85 162 100 152 C115 162 112 212 128 212 C142 212 148 190 155 160 C165 120 185 90 178 55 C170 15 130 10 100 30 Z" fill="#FFFEF7"/>
+    <path d="M66 90 Q99.5 117 133 90" fill="none" stroke="#163B34" stroke-width="14" stroke-linecap="round"/>
+    <path d="M177 5 C180 25 185 30 205 33 C185 36 180 41 177 61 C174 41 169 36 149 33 C169 30 174 25 177 5Z" fill="#E5BD66" stroke="#163B34" stroke-width="2.5" paint-order="stroke" stroke-linejoin="round"/>
+  </g>
+</svg>
