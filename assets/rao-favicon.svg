@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="56" fill="#163B34"/>
-  <path d="M128 48 C105 48 94 34 75 34 C48 34 34 54 34 80 C34 112 51 132 59 164 L70 208 C73 219 78 224 86 224 C96 224 101 214 105 200 L116 163 C118 155 122 150 128 150 C134 150 138 155 140 163 L151 200 C155 214 160 224 170 224 C178 224 183 219 186 208 L197 164 C205 132 222 112 222 80 C222 54 208 34 181 34 C162 34 151 48 128 48Z" fill="#FFFEF7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 0 218 218">
+  <mask id="tooth" maskUnits="userSpaceOnUse" x="10" y="-4" width="204" height="226">
+    <rect x="10" y="-4" width="204" height="226" fill="#fff"/>
+    <path d="M66 90 Q99.5 117 133 90" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round"/>
+    <path d="M177 7 C178.5 26 182 31 203 33 C182 35 178.5 40 177 59 C175.5 40 172 35 151 33 C172 31 175.5 26 177 7Z" fill="#000" stroke="#000" stroke-width="7" stroke-linejoin="round"/>
+  </mask>
+  <path d="M100 30 C70 10 30 15 22 55 C15 90 35 120 45 160 C52 190 58 212 72 212 C88 212 85 162 100 152 C115 162 112 212 128 212 C142 212 148 190 155 160 C165 120 185 90 178 55 C170 15 130 10 100 30 Z" fill="#F7F2E9" mask="url(#tooth)"/>
+  <path d="M177 7 C178.5 26 182 31 203 33 C182 35 178.5 40 177 59 C175.5 40 172 35 151 33 C172 31 175.5 26 177 7Z" fill="#C4A977"/>
 </svg>
