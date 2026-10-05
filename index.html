@@ -75,8 +75,18 @@ button,input,select,textarea{font:inherit;color:inherit}
 .trust{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .memb{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 56px;padding:30px 0;font-family:var(--serif);font-size:22px;color:var(--ink2)}
 .trust-g{display:grid;grid-template-columns:repeat(3,1fr)}
-.trust-i{display:flex;align-items:center;justify-content:center;gap:14px;padding:34px 24px;font-size:16px;font-weight:500;letter-spacing:.02em}
-.trust-i+.trust-i{border-left:1px solid var(--line)}
+.trust-i{display:flex;align-items:center;justify-content:center;gap:16px;padding:18px 20px}
+.trust-i+.trust-i{border-left:1px solid rgba(42,40,37,.08)}
+.trust-icon{width:26px;height:26px;flex:none;color:var(--gold-ink)}
+.trust-copy{display:flex;flex-direction:column;gap:4px}
+.trust-title{font-size:18px;font-weight:600;line-height:1.3;color:var(--night)}
+.trust-detail{font-size:14px;line-height:1.5;color:var(--ink2)}
+.trust-rating{display:flex;align-items:center;gap:10px}
+.trust-stars{display:flex;gap:2px;color:var(--gold-ink)}
+.trust-stars svg{width:14px;height:14px;fill:currentColor}
+.trust-calls{display:flex;flex-wrap:wrap;gap:4px 14px}
+.trust-calls a{text-decoration:underline;text-decoration-color:rgba(117,90,42,.3);text-underline-offset:3px}
+.trust-calls a:hover{color:var(--gold-ink);text-decoration-color:currentColor}
 .grid-t{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(216px,100%),1fr));gap:24px}
 .about-g{display:grid;grid-template-columns:5fr 6fr;gap:112px;align-items:center}
 .cred{display:grid;grid-template-columns:repeat(4,1fr);margin-top:104px;border-top:1px solid var(--line)}
@@ -352,36 +362,34 @@ a{color:inherit;text-decoration:none}
   <section class="trust" aria-label="Why patients choose us">
     <div class="wrap">
       <div class="trust-g">
-        
-          <div class="trust-i">
-            
-            <span><span class="sc-interp">Two trusted Maryland practices</span></span>
+        <div class="trust-i">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div class="trust-copy">
+            <p class="trust-title">Two Maryland Locations</p>
+            <p class="trust-detail">Pikesville &amp; Eldersburg</p>
           </div>
-        
-          <div class="trust-i">
-            
-              <span aria-hidden="true" style="display: flex; gap: 3px;">
-                
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#C4A977" stroke="#B89C69" stroke-width="1.2" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"></path></svg>
-                
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#C4A977" stroke="#B89C69" stroke-width="1.2" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"></path></svg>
-                
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#C4A977" stroke="#B89C69" stroke-width="1.2" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"></path></svg>
-                
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#C4A977" stroke="#B89C69" stroke-width="1.2" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"></path></svg>
-                
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#C4A977" stroke="#B89C69" stroke-width="1.2" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"></path></svg>
-                
-              </span>
-            
-            <span><span class="sc-interp">5.0 stars · 540 reviews in Eldersburg</span></span>
+        </div>
+        <div class="trust-i">
+          <div class="trust-copy">
+            <p class="trust-title">Patient Reviews</p>
+            <div class="trust-rating">
+              <span class="trust-stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span>
+              <span class="trust-detail"><span aria-label="5.0 out of 5 stars">5.0</span> · 540 Reviews</span>
+            </div>
+            <p class="trust-detail">Eldersburg Practice</p>
           </div>
-        
-          <div class="trust-i">
-            
-            <span><span class="sc-interp">Same-day emergency care</span></span>
+        </div>
+        <div class="trust-i">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 3 3 5-2 2a14 14 0 0 0 6 6l2-2 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg>
+          <div class="trust-copy">
+            <p class="trust-title">Emergency Dental Care</p>
+            <p class="trust-detail">Same-Day Care · Call Your Office</p>
+            <div class="trust-detail trust-calls">
+              <a href="tel:4438986788" aria-label="Call Pikesville for emergency dental care">Pikesville</a>
+              <a href="tel:4107817188" aria-label="Call Eldersburg for emergency dental care">Eldersburg</a>
+            </div>
           </div>
-        
+        </div>
       </div>
     </div>
   </section>
