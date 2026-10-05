@@ -2,6 +2,5 @@
 .footer-icon{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid rgba(247,242,233,.3);border-radius:50%;color:#F7F2E9;transition:color .2s,border-color .2s,background .2s}
 .footer-icon svg{width:23px;height:23px;flex:none}
 a.footer-icon:hover{color:#C4A977;border-color:#C4A977;background:rgba(247,242,233,.05)}
-.footer-social-mark{display:block;width:23px;height:23px;background:currentColor;-webkit-mask:var(--social-mark) center / contain no-repeat;mask:var(--social-mark) center / contain no-repeat}
 .footer-icon:focus-visible{outline:2px solid #C4A977;outline-offset:4px}
 @media(prefers-reduced-motion:reduce){.footer-icon{transition:none}}
