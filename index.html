@@ -37,7 +37,11 @@ button,input,select,textarea{font:inherit;color:inherit}
 .sec{padding:128px 0;scroll-margin-top:72px}
 .sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 64px;margin-bottom:64px}
 .hero{position:relative;min-height:860px;display:flex;align-items:flex-end;overflow:hidden;background:radial-gradient(90% 120% at 70% 40%,#2B5049 0%,#1F3A36 55%,#172C29 100%);color:var(--ivory)}
-.hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center}
+.hero{background-image:url('assets/hero-dental-poster.jpg');background-size:cover;background-position:60% center}
+.hero-video-toggle{position:absolute;right:24px;bottom:24px;z-index:2;border:1px solid rgba(247,242,233,.5);border-radius:999px;background:rgba(23,44,41,.75);color:var(--ivory);padding:10px 16px;font-size:13px;cursor:pointer}
+.hero-video-toggle[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.hero-vid{display:none}.hero-vid.is-playing{display:block}}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,44,41,.72) 0%,rgba(23,44,41,.35) 55%,rgba(23,44,41,.15) 100%),linear-gradient(180deg,rgba(23,44,41,.45) 0%,rgba(23,44,41,0) 35%,rgba(23,44,41,.6) 100%)}
 .hero-stat{display:flex;flex-direction:column;gap:2px;margin-bottom:28px}
 .hero-num{font-family:var(--serif);font-size:64px;line-height:1;color:var(--gold)}
@@ -308,11 +312,11 @@ a{color:inherit;text-decoration:none}
 
   
   <section class="hero dark">
-    <video class="hero-vid" autoplay="" muted="" loop="" playsinline="" aria-hidden="true">
-      <source src="assets/hero-bokeh.mp4" type="video/mp4">
-      <source src="assets/hero-bokeh.webm" type="video/webm">
+    <video class="hero-vid" muted loop playsinline preload="none" poster="assets/hero-dental-poster.jpg" aria-hidden="true">
+      <source src="assets/hero-dental.mp4" type="video/mp4">
     </video>
     <div class="hero-shade"></div>
+    <button class="hero-video-toggle" type="button" hidden>Play background video</button>
     <div class="hero-in">
       <div class="wrap">
         <h1 class="hero-h1"><span class="hero-name">Rao Dental</span><span class="hero-tag">Family &amp; Cosmetic Dentistry in Pikesville and Eldersburg, Maryland</span></h1>
@@ -1238,6 +1242,25 @@ a{color:inherit;text-decoration:none}
 
 <script>
 (function(){
+  var heroVideo=document.querySelector('.hero-vid');
+  var videoToggle=document.querySelector('.hero-video-toggle');
+  if(heroVideo&&videoToggle){
+    var motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
+    heroVideo.muted=true;
+    videoToggle.hidden=false;
+    function updateVideoToggle(){videoToggle.textContent=heroVideo.paused?'Play background video':'Pause background video';}
+    function playHeroVideo(){
+      heroVideo.classList.add('is-playing');
+      var playback=heroVideo.play();
+      if(playback) playback.catch(function(){heroVideo.classList.remove('is-playing');updateVideoToggle();});
+    }
+    heroVideo.addEventListener('play',updateVideoToggle);
+    heroVideo.addEventListener('pause',updateVideoToggle);
+    heroVideo.addEventListener('error',function(){heroVideo.style.display='none';videoToggle.hidden=true;});
+    videoToggle.addEventListener('click',function(){if(heroVideo.paused) playHeroVideo();else heroVideo.pause();});
+    motionPreference.addEventListener('change',function(e){if(e.matches){heroVideo.pause();heroVideo.classList.remove('is-playing');}});
+    if(!motionPreference.matches) playHeroVideo();
+  }
   var nv=document.querySelector('.nv');
   function onScroll(){ if(!nv) return; var y=window.pageYOffset||0; nv.classList.toggle('solid', y>24); if(y>24) nv.classList.remove('ondark'); else if(nv.dataset.home==='1') nv.classList.add('ondark'); }
   if(nv){ nv.dataset.home = nv.classList.contains('ondark')?'1':'0'; window.addEventListener('scroll',onScroll,{passive:true}); onScroll(); }
