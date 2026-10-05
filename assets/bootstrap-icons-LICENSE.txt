@@ -1,4 +1,6 @@
 Facebook icon sourced from https://github.com/twbs/icons/blob/main/icons/facebook.svg
+Instagram, LinkedIn, and YouTube icons sourced from the same Bootstrap Icons
+repository: icons/instagram.svg, icons/linkedin.svg, and icons/youtube.svg.
 
 The MIT License (MIT)
 
